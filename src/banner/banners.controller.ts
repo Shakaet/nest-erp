@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common';
 import { AnyFilesInterceptor } from '@nestjs/platform-express';
 import { BannersService } from './banners.service.js';
-import { CreateBannerDto } from './create-banner.dto.js';
+import { CreateBannerDto } from './create.dto.js';
 import { cloudinaryStorage } from "../common/cloudinary/cloudinary.config.js";
 
 @Controller('banners')

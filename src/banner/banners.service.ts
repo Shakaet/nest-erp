@@ -2,7 +2,7 @@ import { Injectable, BadRequestException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Banner, BannerDocument } from './banner.schema.js';
-import { CreateBannerDto } from './create-banner.dto.js';
+import { CreateBannerDto } from './create.dto.js';
 
 
 @Injectable()
