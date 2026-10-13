@@ -4,6 +4,8 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ThrottlerModule, ThrottlerGuard } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
 import { UsersModule } from './users/users.module.js';
+import { CloudinaryModule } from './common/cloudinary/cloudinary.module.js';
+import { BannersModule } from './banner/banners.module.js';
 
 @Module({
   imports: [
@@ -37,6 +39,8 @@ import { UsersModule } from './users/users.module.js';
     ]),
 
     UsersModule,
+    CloudinaryModule,
+    BannersModule,
   ],
 
   providers: [
