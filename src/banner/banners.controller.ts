@@ -44,8 +44,6 @@ export class BannersController {
     const data = await this.bannersService.getAllBanners();
 
     return {
-      statusCode: HttpStatus.OK,
-      success: true,
       message: 'Banners retrieved successfully',
       data,
     };

@@ -4,6 +4,7 @@ import { ConfigService } from '@nestjs/config';
 import helmet from 'helmet';
 import { ValidationPipe } from '@nestjs/common';
 import cookieParser from 'cookie-parser';
+import { TransformInterceptor } from './common/interceptors/transform.interceptor.js';
 import { GlobalExceptionFilter } from './common/filters/global-exception.filter.js';
 
 async function bootstrap() {
@@ -37,6 +38,8 @@ async function bootstrap() {
 
 // ৬. গ্লোবাল এরর হ্যান্ডলার
 app.useGlobalFilters(new GlobalExceptionFilter());
+
+app.useGlobalInterceptors(new TransformInterceptor())
 
 
   const port = configService.get<number>('PORT') || 3000;
