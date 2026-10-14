@@ -6,6 +6,8 @@ import { APP_GUARD } from '@nestjs/core';
 import { UsersModule } from './user/users.module.js';
 import { CloudinaryModule } from './common/cloudinary/cloudinary.module.js';
 import { BannersModule } from './banner/banners.module.js';
+import { AdminModule } from './admin/admin.module.js';
+import { AdminRoleModule } from './admin-role/admin-role.module.js';
 
 @Module({
   imports: [
@@ -41,6 +43,9 @@ import { BannersModule } from './banner/banners.module.js';
     UsersModule,
     CloudinaryModule,
     BannersModule,
+    AdminModule,
+    AdminRoleModule,
+
   ],
 
   providers: [
