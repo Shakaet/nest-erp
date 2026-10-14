@@ -75,7 +75,7 @@ export class GlobalExceptionFilter implements ExceptionFilter {
       success: false,
       message,
       errorMessages,
-      stack: process.env.NODE_ENV !== 'production' && exception instanceof Error ? exception.stack : undefined,
+      // stack: process.env.NODE_ENV !== 'production' && exception instanceof Error ? exception.stack : undefined,
     });
   }
 }
