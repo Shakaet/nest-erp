@@ -14,6 +14,7 @@ import {
 } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import type { Request, Response } from 'express';
+import { Auth } from '../common/guard/auth.decorator.js';
 
 import { AdminService } from './admin.service.js';
 import { CreateAdminDto } from './create-admin.dto.js';
@@ -100,6 +101,7 @@ export class AdminController {
   }
 
   @Get('dashboard')
+  @Auth('all_create', 'admin')
   async getDashboard(
     @Query('page') page = '1',
     @Query('limit') limit = '50',
